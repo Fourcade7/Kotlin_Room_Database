@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
 
         val userDao = db.userDao()
         val user=User(0,"Fourade7","Aminov")
-        //userDao.insertUser(user)
+        userDao.insertUser(user)
 
-        textview.text="id: ${userDao.getAllUsers().get(1).id}\nfullname: ${userDao.getAllUsers().get(0).fullname}"
+        textview.text="id: ${userDao.getAllUsers().get(0).id}\nfullname: ${userDao.getAllUsers().get(0).fullname}\nsize: ${userDao.getAllUsers().size}"
 
 
 
